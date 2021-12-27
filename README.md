@@ -12,19 +12,21 @@ It creates a 2D representation of the Rubik's cube, where each line represents a
 
 It has the 12 possible moviments and with that it was generated a dataset containing more than 10 million data points representing a possible combination of the Rubik's cube and the depth (how many moviments to get to that configuration).
 
-There are two main Artificial Neural Networks, the first receives a 3x3 matrix representing the pixels of the mosaic for one cube. It outputs a possible cube configuration that contains those final pixels. The second receives a full cube configuration and returns the amount of steps it is away from the solved Rubik's cube.
+It was developed an Artificial Neural Network that receives a full cube configuration and returns the depth - amount of steps it is away from the solved Rubik's cube.
 
-After getting the final configuration, the algorithm will try to find the path (sequence of moviments) so that you can transform a solved cube into an arrangement that constains the 3x3 pixels from your mosaic.
+It is still needed to develop another Artificial Neural Network that receives a 3x3 matrix representing the pixels of the mosaic for one cube and outputs a possible valid cube configuration that contains those final pixels. 
 
-## 2. How can I use it?
+After getting the final configuration, the algorithm will tries to find the path (sequence of moviments) so that you can transform a solved cube into an arrangement that constains the 3x3 pixels from your mosaic.
 
-You need to use the [creator file](creating_mosaic.ipynb) where you can use the trained models to find the sequence of steps to create your mosaic.
+## 2. How to use it?
 
-Just change the variable matrix where you define the 3x3 configuration of one face of your final Rubik's cube.
+You need to use the [testing file](testing_neural_net.ipynb) where you can use the trained models to find the sequence of steps to create your mosaic.
+
+Just change the mario_cube matrix on section 5 as the final configuration with the face of your final Rubik's cube.
 
 ## 3. Next steps
 
-A website will be developed so that people without coding knowledge would be able to create mosaics in a more intuitive way.
+I aim to develop a website so that people without coding knowledge would be able to create mosaics in a more intuitive way.
 
 I will also try to implement an algorithm to create a two-sided mosaic with that Neural Network.
 
